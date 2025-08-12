@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Josefina Zeballos - Obligatorio Taller de Despliegue de Aplicaciones</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #d8c6f0; /* violeta pastel */
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #000; /* letras negras */
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9); /* blanco con algo de transparencia */
+      padding: 28px;
+      border-radius: 14px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(100, 100, 100, 0.15); /* sombra más suave tipo humo */
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      animation: fadeIn 1s ease;
+    }
+    img {
+      width: 220px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      margin: 0;
+      color: #000; /* negro */
+      font-size: 28px;
+    }
+    p {
+      margin: 6px 0;
+      color: #000; /* negro */
+    }
+    .info {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chip {
+      background: #e3d7ff; /* tono lila muy suave */
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: #3a1a82; /* violeta oscuro */
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #555; /* gris oscuro */
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="foto.jpg" alt="Foto de Josefina Zeballos">
+    <div>
+      <h1>Josefina Zeballos</h1>
+      <p><strong>Número de estudiante:</strong> 180363</p>
+      <p><strong>CI:</strong> 5.518.498-8</p>
+
+      <div class="info">
+        <div class="chip">Taller de Despliegue de Aplicaciones</div>
+        <div class="chip">ORT - 2025</div>
+        <div class="chip">Entrega Obligatorio</div>
+      </div>
+
+      <footer>
+        Publicado el <span id="fecha"></span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
